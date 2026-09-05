@@ -3,12 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhysX Is Under Development</title>
+    <title>PhysX</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/cannon.js/0.6.2/cannon.min.js"></script>
+    <script defer src="index.js"></script>
 </head>
 <body>
-    <h1>Sorry, but PhysX is currently under development.</h1>
-    <p>We are working hard to bring you the best physics simulation experience.
-        If you are wondering why PhysX is under development, it is because Hippo's Mod's version of PhysX is the Kernel version, this is the ENGINE version, which is currently being developed for making games, 3D animations and eductional simulations. Thanks for reading this.
-    </p>
+    <main class="start-screen">
+        <img class="project-mark" src="New Project(1).png" alt="">
+        <nav class="project-actions" aria-label="Project actions">
+            <a href="create.html">create</a>
+            <a href="catalog.html">catalog</a>
+            <a href="animation_library.html">animations</a>
+        </nav>
+    </main>
+    <main class="game-screen" hidden>
+        <header class="game-header">
+            <a href="catalog.html">&lt;- catalog</a>
+            <span id="game-engine-status">Three.js + Cannon.js</span>
+        </header>
+        <section class="game-stage" aria-label="Game scene">
+            <div id="game-canvas"></div>
+            <div class="crosshair" aria-hidden="true">+</div>
+            <div class="game-title">
+                <p class="eyebrow">Physics playground</p>
+                <h1 id="game-name">Game</h1>
+            </div>
+            <p class="game-message" id="game-message">Find the crate and place it on the target.</p>
+            <p class="game-instructions" id="game-instructions">Click to look - WASD to move - Shift to sprint - E to interact</p>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="stylesheet" href="catalog.css">
+</head>
+<body>
+    <main class="catalog-page">
+        <header class="catalog-header">
+            <div>
+                <a class="back-link" href="index.html">New Project(1)</a>
+                <p class="eyebrow">Scene library</p>
+                <h1>Game catalog</h1>
+                <p class="intro">Browse playable experiments, challenges, and physics playgrounds.</p>
+            </div>
+            <a class="create-link" href="create.html">+ create game</a>
+        </header>
+
+        <section class="catalog-toolbar" aria-label="Catalog controls">
+            <label class="search-box">
+                <span class="sr-only">Search games</span>
+                <input id="game-search" type="search" placeholder="Search games..." autocomplete="off">
+            </label>
+            <div class="filters" role="group" aria-label="Filter games by category">
+                <button class="filter is-active" type="button" data-filter="all">all</button>
+                <button class="filter" type="button" data-filter="challenge">challenge</button>
+                <button class="filter" type="button" data-filter="sandbox">sandbox</button>
+                <button class="filter" type="button" data-filter="arcade">arcade</button>
+            </div>
+        </section>
+
+        <section class="game-grid" aria-live="polite">
+            <article class="game-card" data-category="challenge" data-search="gravity lab challenge physics">
+                <div class="game-art art-gravity"><span>gravity<br>lab</span><i></i></div>
+                <div class="game-info">
+                    <div><span class="game-type">challenge</span><span class="difficulty">easy</span></div>
+                    <h2>Gravity Lab</h2>
+                    <p>Guide the charge through a shifting field.</p>
+                    <a class="play-link" href="index.html?game=gravity-lab">open game <span aria-hidden="true">-&gt;</span></a>
+                </div>
+            </article>
+
+            <article class="game-card" data-category="arcade" data-search="orbital run arcade space">
+                <div class="game-art art-orbit"><span>orbital<br>run</span><i></i></div>
+                <div class="game-info">
+                    <div><span class="game-type">arcade</span><span class="difficulty">medium</span></div>
+                    <h2>Orbital Run</h2>
+                    <p>Use momentum to sling your ship around.</p>
+                    <a class="play-link" href="index.html?game=orbital-run">open game <span aria-hidden="true">-&gt;</span></a>
+                </div>
+            </article>
+
+            <article class="game-card" data-category="sandbox" data-search="bridge builder sandbox construction">
+                <div class="game-art art-bridge"><span>bridge<br>builder</span><i></i></div>
+                <div class="game-info">
+                    <div><span class="game-type">sandbox</span><span class="difficulty">medium</span></div>
+                    <h2>Bridge Builder</h2>
+                    <p>Build a structure that can handle the weight.</p>
+                    <a class="play-link" href="index.html?game=bridge-builder">open game <span aria-hidden="true">-&gt;</span></a>
+                </div>
+            </article>
+
+            <article class="game-card" data-category="challenge" data-search="rocket yard challenge launch">
+                <div class="game-art art-rocket"><span>rocket<br>yard</span><i></i></div>
+                <div class="game-info">
+                    <div><span class="game-type">challenge</span><span class="difficulty">hard</span></div>
+                    <h2>Rocket Yard</h2>
+                    <p>Balance thrust, fuel, and a very small landing pad.</p>
+                    <a class="play-link" href="index.html?game=rocket-yard">open game <span aria-hidden="true">-&gt;</span></a>
+                </div>
+            </article>
+
+            <article class="game-card" data-category="arcade" data-search="marble circuit arcade race">
+                <div class="game-art art-marble"><span>marble<br>circuit</span><i></i></div>
+                <div class="game-info">
+                    <div><span class="game-type">arcade</span><span class="difficulty">easy</span></div>
+                    <h2>Marble Circuit</h2>
+                    <p>Race the clock through a kinetic obstacle course.</p>
+                    <a class="play-link" href="index.html?game=marble-circuit">open game <span aria-hidden="true">-&gt;</span></a>
+                </div>
+            </article>
+
+            <article class="game-card" data-category="sandbox" data-search="crash test sandbox vehicles">
+                <div class="game-art art-crash"><span>crash<br>test</span><i></i></div>
+                <div class="game-info">
+                    <div><span class="game-type">sandbox</span><span class="difficulty">hard</span></div>
+                    <h2>Crash Test</h2>
+                    <p>Design a machine and discover where it breaks.</p>
+                    <a class="play-link" href="index.html?game=crash-test">open game <span aria-hidden="true">-&gt;</span></a>
+                </div>
+            </article>
+        </section>
+        <p class="empty-state" hidden>No games match that search.</p>
+    </main>
+    <script src="catalog.js"></script>
+</body>
+</html>
